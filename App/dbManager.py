@@ -1,5 +1,5 @@
 import json
-
+from datetime import datetime
 class PostManager:
     JSON_FILE = "data.json"
 
@@ -17,7 +17,10 @@ class PostManager:
 
     def insertPost(self, aPost):
         aPost.id = self.__posts[0]["id"] + 1
+        aPost.count = 0
+        aPost.date = datetime.strftime(datetime.now(), "%d %m %Y")
         self.__posts.insert(0, aPost.toDic())
+
         self.savePosts(self.__posts)
 
     def updatePost(self, indexID, aPost):
