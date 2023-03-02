@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<meta name="viewport" context="width=device-width, initial-scale=1.0">
+
+
+
+<body style="min-height: 75rem; padding-top: 4.5rem;">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Board</a>
+    </nav>
+    <section class="container">
+        <div class="card">
+            <div class="card-header">This is the main page rendered from a template and using bootstrap</div>
+
+            <div class="card-body">
+
+                <table class="table table-striped">
+                    <tr>
+                        <th>Title</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Count</th>
+                    </tr>
+                    {% for post in posts %}
+                    <tr>
+                        <td>{{ post.title }}</td>
+                        <td>{{ post.name }}</td>
+                        <td>{{ post.date }}</td>
+                        <td>{{ post.count }}</td>
+                    </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
