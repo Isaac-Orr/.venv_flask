@@ -22,7 +22,7 @@ def update(indexID):
 def delete(indexID):
     Pmanager = PostManager()
     Pmanager.deletePost(indexID)
-    return redirect(url_for("list"))
+    return redirect(url_for("list.html"))
 
 @app.route("/")
 @app.route("/list")
