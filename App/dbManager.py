@@ -26,6 +26,8 @@ class PostManager:
     def updatePost(self, indexID, aPost):
         for _idx, _post in enumerate(self.__posts):
             if indexID == _post["id"]:
+                aPost.count = _post["count"]
+                aPost.date = _post["date"]
                 self.__posts[_idx] = aPost.toDic()
         self.savePosts(self.__posts)
 
