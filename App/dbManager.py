@@ -16,8 +16,8 @@ class PostManager:
             json.dump(posts, f)
 
     def insertPost(self, aPost):
-        aPost.id = self._posts[0]["id"] + 1
-        self._posts.insert(0, aPost.toDic())
+        aPost.id = self.__posts[0]["id"] + 1
+        self.__posts.insert(0, aPost.toDic())
         self.savePosts(self.__posts)
 
     def updatePost(self, indexID, aPost):

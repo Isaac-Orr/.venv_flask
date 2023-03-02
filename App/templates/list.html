@@ -3,7 +3,16 @@
 
 <section class="container">
     <div class="card">
-        <div class="card-header">This is the main page rendered from a template and using bootstrap</div>
+        <div class="card-header">Board
+            <div class="btn-group float-right">
+                <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Action  
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{url_for('form')}}">Write</a>
+                </div>
+            </div>
+        </div>
 
         <div class="card-body">
 
