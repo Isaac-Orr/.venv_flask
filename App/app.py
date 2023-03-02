@@ -13,7 +13,7 @@ def update(indexID):
     aPost = Post.populate(request.form)
     aPost.name = "Isaac Orr"
     aPost.id = indexID
-
+#
     Pmanager = PostManager()
     Pmanager.updatePost(indexID, aPost)
     return redirect(url_for('list'))

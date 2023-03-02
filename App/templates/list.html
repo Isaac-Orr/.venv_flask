@@ -30,7 +30,7 @@
                             </button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{url_for('form', indexID=post.id)}}">Update</a>
-                                <a class="dropdown-item" index_id= "{{post.id}}" href="#">Delete</a>
+                                <a class="dropdown-item" index_id= "{{post.id}}" href="{{url_for('delete',indexID=post.id)}}">Delete</a>
 
                             </div>
                         </div>
